@@ -12,9 +12,7 @@ export default function () {
   }
 
   socket.on('error', function (err) {
-    // eslint-disable-next-line no-console
     console.log('received socket error:')
-    // eslint-disable-next-line no-console
     console.log(err)
   })
 

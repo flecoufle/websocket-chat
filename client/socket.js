@@ -13,7 +13,7 @@ export default function () {
 
   socket.on('error', function (err) {
     console.log('received socket error:')
-    console.log(err)
+      console.log(err)
   })
 
   function register(name, cb) {

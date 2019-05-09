@@ -122,6 +122,7 @@ export default class Chatroom extends React.Component {
 
     this.props.onSendMessage(this.state.input, (err) => {
       if (err)
+        // eslint-disable-next-line no-console
         return console.error(err)
 
       return this.setState({ input: '' })
@@ -129,7 +130,7 @@ export default class Chatroom extends React.Component {
   }
 
   onMessageReceived(entry) {
-    console.log('onMessageReceived:', entry)
+    // console.log('onMessageReceived:', entry)
     this.updateChatHistory(entry)
   }
 
@@ -174,6 +175,7 @@ export default class Chatroom extends React.Component {
                     ({ user, message, event }, i) => [
                       <NoDots>
                         <ListItem
+                          // eslint-disable-next-line react/no-array-index-key
                           key={i}
                           style={{ color: '#fafafa' }}
                           leftAvatar={<Avatar src={user.image} />}
